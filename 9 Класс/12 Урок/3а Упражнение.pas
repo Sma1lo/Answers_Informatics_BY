@@ -1,15 +1,15 @@
 var
-  inputString: string;
-  digitCount, i: integer;
+  a: string;
+  b, i: integer;
 begin
   writeln('Введите строку:');
-  readln(inputString);
-  
-  digitCount := 0;
-  for i := 1 to length(inputString) do
+  readln(a);
+
+  b:= 0;
+  for i := 1 to length(a) do
   begin
-    if (inputString[i] >= '0') and (inputString[i] <= '9') then
-      digitCount := digitCount + 1;
+    if (a[i] >= '0') and (a[i] <= '9') then
+      b := b + 1;
   end;
-  writeln('Количество цифр в строке: ', digitCount);
+  writeln('Количество цифр в строке: ', b);
 end.
