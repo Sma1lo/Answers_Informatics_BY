@@ -12,4 +12,4 @@ begin
       digitCount := digitCount + 1;
   end;
   writeln('Количество цифр в строке: ', digitCount);
-end. 
+end.
