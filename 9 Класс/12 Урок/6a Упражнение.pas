@@ -1,14 +1,20 @@
-var s: string; i, m: integer;
+var s,sc: string;
+    i,k: integer;
 begin
 write('Введите строку: ');
-read(s);
-
-for i:=1 to length(s) - 1 do
-if ((s[i] = 'Ч') or (s[i] = 'ч')) and ((s[i + 1] = 'Я') or (s[i + 1] = 'я')) then begin
-inc(m, 1);
-s[i + 1] := 'а';
-end;
-
-writeln('Ошибок: ',m);
+readln(s);
+for i:=1 to length(s)-1 do
+    begin
+    sc:=copy(s,i,2);
+    if (sc='чя') or (sc='щя') then
+       begin
+       s[i+1]:='а';
+       inc(k);
+       end;
+    end;
+if k=0 then writeln('Ошибок не обнаружено') else
+begin
+writeln('Обнаружены ошибки в количестве ',k,'. Ошибки исправлены');
 writeln(s);
+end;
 end.
