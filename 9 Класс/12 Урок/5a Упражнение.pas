@@ -1,5 +1,3 @@
-program CountWords;
-
 var
   s: string;
   w, i: integer;
